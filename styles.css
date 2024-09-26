@@ -1,0 +1,57 @@
+h1{
+    text-align: center;
+    color: rgba(11, 4, 1, 0.847);
+    font-family:'Times New Roman', Times, serif
+}
+
+h2{
+    text-align: center;
+}
+
+#postContent{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 50%;
+}
+
+button{
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+}
+
+h3{
+    position: relative;
+    top: 158px;
+    left: 270px;
+}
+
+#postList{
+    position: relative;
+    top: 240px;
+    left: 350px;
+}
+
+
+#signupForm{
+    text-align: center;
+    color:rgba(11, 4, 1, 0.847);
+    
+}
+
+body{
+    background-image: url(https://images3.alphacoders.com/985/985748.jpg);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+h3 {
+    text-align:left
+    color black
+}
+
+
+
