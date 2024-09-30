@@ -59,12 +59,32 @@ function handleCreatePost() {
     }
 }
 
-function editPost(){
+function editPost() {
     const postNumber = parseInt(document.getElementById('numberTextBox').value) - 1;
     const postContent = document.getElementById('postContent').value;
-    posts[postNumber] = postContent;
-    renderPostList();
+
+    if (postContent === '') {
+        // If the input is blank, delete the post
+        if (postNumber >= 0 && postNumber < posts.length) {
+            posts.splice(postNumber, 1); // Remove the post
+        } else {
+            alert('Invalid post number');
+        }
+    } else {
+        // Update the post content
+        if (postNumber >= 0 && postNumber < posts.length) {
+            posts[postNumber] = postContent;
+        } else {
+            alert('Invalid post number');
+        }
+    }
+    
+    // Clear the textarea after editing or deleting
+    document.getElementById('postContent').value = '';
+
+    renderPostList(); // Update the displayed post list
 }
+
 
 function renderPostList() { //step 8
     const postListElement = document.getElementById('postList');
