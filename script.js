@@ -10,7 +10,7 @@ function renderSignUp() { // step 4
             <input type="email" id="email" placeholder="Enter your email"><br>
             <label for="password">Password:</label>
             <input type="password" id="password" placeholder="Enter your password"><br>
-            <button type="button" onclick="handleSignUp()">Sign Up</button>
+            <button type="button" class="button" onclick="handleSignUp()">Sign Up</button>
         </form>
     `;
 }
@@ -33,12 +33,14 @@ function renderHomePage() {  //step 6  added editPost() button
     rootDiv.innerHTML = `
         <h1>Welcome, ${userName}!</h1>
         <h2>Create a Post</h2>
-        <textarea id="postContent" placeholder="What's on your mind?"></textarea><br>
-        <button type="button" onclick="handleCreatePost()">Post</button>
+        <div id="postContainer">
+            <textarea id="postContent" placeholder="What's on your mind?"></textarea><br>
+            <button type="button" class="button" onclick="handleCreatePost()">Post</button>
+        </div>
         <div>
             <label for="numberText">Enter post number to edit:</label>
             <input type="text" id="numberTextBox" size="2">
-            <button type="button" onclick="editPost()">Edit previous posts, leave blank to delete</button>
+            <button type="button" class="button" onclick="editPost()">Edit previous posts, leave blank to delete</button>
         </div>
         <h3>Your Posts</h3>
         <ul id="postList"></ul>
